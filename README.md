@@ -161,7 +161,7 @@ python3 -m venv lndpython
 source lndpython/bin/activate
 
 export APP_DIR=$HOME/.lnd
-export CLIENT_DIR=$HOME/lndgrpclib
+export CLIENT_DIR=$HOME/lndgrpc
 python3 rebuild_protos.py
 pip install -e .
 ```
