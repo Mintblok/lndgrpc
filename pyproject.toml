@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "lndgrpclib"
+version = "0.6.8"
+description = "An RPC client for LND (lightning network deamon)"
+authors = ["Mintblok"]
+readme = "README.md"
+license = "MIT"
+repository = "https://github.com/mintblok/lndgrpc"
+homepage = "https://mintblok.net/project/lndgrpc"
+packages = [
+    { include = "lndgrpc" },
+]
+exclude = ["lndgrpc/googleapis/*"]
+
+[tool.poetry.scripts]
+lndgrpcclient_cli = "lndgrpc.cli:cli"
+
+[tool.poetry.dependencies]
+python = ">=3.8"
+protobuf = ">=3.15.8"
+aiogrpc = ">=1.8"
+googleapis-common-protos = ">=1.53.0"
+grpcio = ">=1.37.0"
+grpcio-tools = ">=1.37.0"
+protobuf3-to-dict = ">=0.1.5"
+yachalk = ">=0.1.5"
+click = ">=8.1.3"
+ptpython = ">=3.0.20"
+cryptography = ">=41.0.2"
+
+[tool.poetry.group.dev.dependencies]
+sh = ">=2.0.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
